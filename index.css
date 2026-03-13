@@ -109,3 +109,9 @@ body {
   color: #eaeaea;
   border-color: #eaeaea;
 }
+
+.current-time {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  letter-spacing: 0.1em;
+}

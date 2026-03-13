@@ -44,7 +44,17 @@ function resetTimer() {
   updateDisplay();
 }
 
+function updateClock() {
+  const now = new Date();
+  const h = now.getHours().toString().padStart(2, "0");
+  const m = now.getMinutes().toString().padStart(2, "0");
+  const s = now.getSeconds().toString().padStart(2, "0");
+  document.getElementById("current-time").textContent = `${h}:${m}:${s}`;
+}
+
 updateDisplay();
+updateClock();
+setInterval(updateClock, 1000);
 
 document.querySelector(".btn-start").onclick = startTimer;
 document.querySelector(".btn-stop").onclick = stopTimer;
